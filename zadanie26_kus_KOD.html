@@ -1,0 +1,67 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+  <html>
+    <head>
+    <title>
+    Kuśmierski
+    </title>
+    <script language="JavaScript">
+    function P(b_kus,a_kus,h_kus)
+    {
+    a_kus=parseFloat(a_kus)
+    b_kus=parseFloat(b_kus)
+    h_kus=parseFloat(h_kus)
+    Pole_kusmierski = (Math.abs((a_kus+b_kus))*h_kus)/2
+    document.getElementsByName('Pole')[0].value=Pole_kusmierski.toFixed(2); /* na dokument */
+    }
+    function O(b_kus,a_kus,h_kus)
+    {
+    a_kus=parseFloat(a_kus)
+    b_kus=parseFloat(b_kus)
+    h_kus=parseFloat(h_kus)
+    x_kus = (Math.abs(a_kus - b_kus))/2;
+    bok1_kus = Math.pow(x_kus,2)+Math.pow(h_kus,2);
+    bok1_1 = Math.sqrt(bok1_kus);
+    obwod_kusmierski = a_kus+b_kus+ 2*bok1_1;
+    document.getElementsByName('Obwod')[0].value=obwod_kusmierski.toFixed(2);;
+    }
+    </script>
+    </head>
+    <body>
+    <center> 
+    <br> <br>
+    <form name="formularz" action="..." onsubmit="P(this.a.value,this.b.value,this.h.value); O(this.a.value,this.b.value,this.h.value);return false">
+    Podaj a=
+    <input size="6" name="a">
+    Podaj b=
+    <input size="6" name="b">
+    Podaj h=
+    <input size="6" name="h">
+    <br> <br>
+    <input TYPE="submit" Value="oblicz" >
+    <br> <br>
+    Obwod =
+    <input size="6" name="Obwod">
+    Pole =
+    <input size="6" name="Pole">
+    </form>
+    </center>
+    </body>
+    </html>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

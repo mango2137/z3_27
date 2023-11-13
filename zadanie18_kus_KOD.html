@@ -1,0 +1,52 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+<!DOCTYPE html>
+<head>
+<title> Użycie fukcji </title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:navy;font-size:50px;">
+<script language="JavaScript">
+var a=parseFloat(prompt("a=",""));
+var b=parseFloat(prompt("b=",""));
+function suma_kus(a, b) {
+return a + b;
+}
+function odejmowanie_kus(a, b) {
+return a - b;
+}
+function mnozenie_kus(a, b) {
+return a * b;
+}
+function do_kwadratu_kus1(a, b) {
+return a = a * a
+}
+function do_kwadratu_kus2(a, b) {
+return b = b * b
+}
+document.write("suma="+suma_kus(a,b)+"<br>");
+document.write("odejmowanie="+odejmowanie_kus(a,b)+"<br>");
+document.write("mnozenie="+mnozenie_kus(a,b)+"<br>");
+document.write("do kwadratu="+do_kwadratu_kus1(a,b)+", "+do_kwadratu_kus2(a, b)+"<br>");
+</script>
+</div>
+</body>
+</html>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

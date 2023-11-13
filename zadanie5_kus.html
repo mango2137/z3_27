@@ -1,0 +1,38 @@
+<html>
+<head>
+<title> Kuśmierski 2P</title>
+<script language="JavaScript">
+function WinOpen_g1()
+{
+window.open("grafika1.html","okienko_g1","toolbar=no,directories=no,menubar=no,height=250,width=140,top=425,left=50");
+}
+function WinOpen_g2()
+{
+window.open("grafika2.html","okienko_g2","toolbar=no,directories=no,menubar=no,height=250,width=140,top=225,left=250");
+}
+function WinOpen_g3()
+{
+window.open("grafika3.html","okienko_g3","toolbar=no,directories=no,menubar=no,height=250,width=140,top=125,left=450");
+}
+function WinOpen_g4()
+{
+window.open("grafika4.html","okienko_g4","toolbar=no,directories=no,menubar=no,height=250,width=140,top=25,left=650");
+}
+function okno_zamknij()
+{
+window.close()
+}
+document.write("wykonal: Mateusz Kuśmierski mój numer w dzienniku to 16, czyli mam układ [(16) mod 4=0] układ 3".fontcolor("red").bold().fontsize(5)+"<br>");
+</script>
+</head>
+<body>
+<form>
+<input type="button" name="grafika1" value="grafika1-Kusmierski" onclick="WinOpen_g1(' ')">
+<input type="button" name="grafika2" value="grafika2-Kusmierski" onclick="WinOpen_g2(' ')">
+<input type="button" name="grafika3" value="grafika3-Kusmierski" onclick="WinOpen_g3(' ')">
+<input type="button" name="grafika4" value="grafika4-Kusmierski" onclick="WinOpen_g4(' ')">
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</form><br>
+
+</body>
+</html>

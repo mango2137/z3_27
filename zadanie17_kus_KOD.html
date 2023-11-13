@@ -1,0 +1,61 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+ <!DOCTYPE html> 
+ <head> 
+ <title> proste obliczenia</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+Pytania:<br>
+1. Wymień cztery sposoby wyprowadzania danych w JS,<br>
+<br>
+Cztery sposoby wyprowadzania danych na stronę:<br>
+ z użyciem dokument.write()<br>
+ z użyciem okienka alert()<br>
+ do okienek formularza<br>
+ do tabeli<br>
+<br>
+2. Czym jest funkcja w JS, omów przy użyciu 4 podpunktów?<br>
+<br>
+Co to jest funkcja?<br>
+ Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy,<br>
+ Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod,<br>
+ Funkcja może mieć argumenty, które wchodzą do wnętrza funkcji i są tam przetwarzane np. suma_kry(a, b),<br>
+ Może(nie zawsze) zwrócić obliczoną wartość zapisaną po słowie kluczowym return.<br>
+<br><br>
+3. Omów metody getElementsByName, getElementById, getElementByTagName (może być w postaci tabeli),<br>
+<br>
+Metoda<br>
+opis<br>
+getElementById("id ")<br>
+dostęp do wszystkich elementów o konkretnej wartości atrybutu id<br>
+getElementByTagName("znacznik ")<br>
+dostęp do wszystkich elementów o typie znacznika, np. P lub DIV<br>
+getElementByName("nazwa")<br>
+dostęp do wszystkich elementów<br>
+<br>
+4. Omów właściwości innerHTML innerText className. (każdą osobno)<br>
+<br>
+25<br>
+Właściwości tak pobranego elementu to:<br>
+- innerHTML – jest to właściwość, która umożliwia odczyt, zmodyfikowanie, wstawienie, albo usunięcie kodu HTML z danego elementu HTML np. w tabeli,<br>
+- innerText – umożliwia określenie ciągu znaków który zostanie umieszczony w elemencie,<br>
+- className – umożliwia określenie klasy CSS użytej do prezentacji elementu.<br>
+</body>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

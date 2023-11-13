@@ -1,0 +1,34 @@
+
+<html>
+<head>
+<title>
+ Kuśmierski
+</title>
+<body>
+<div style="color: blue; font-size: 50px;">
+<script>
+  var n_kus = parseFloat(prompt("N0= ","sztuki"));
+  var t_kus = parseFloat(prompt("T= ","lata"));
+  var t1t2_kus = parseFloat(prompt("T1/2=","lata"));
+  function Lambda(t1t2_kus)
+ {
+  return (Math.log(2))/t1t2_kus;
+ }
+ function euler(t_kus,n_kus)
+ {
+	potega = t*-Lambda(t1t2_kus);
+	e = Math.pow(Math.E,potega);
+  return n * e;
+ }
+document.write("N0 = "+ n_kus +" (sztuk) <br>")
+document.write("t = "+ t_kus +" (lat) <br>")
+document.write("T1/T2 = "+ t1t2_kus +" (lat) <br>");
+document.write("Lambda = "+ Lambda(t1t2_kus).toFixed(7)+" (1/rok) <br>");
+document.write("N = "+euler(t_kus,n_kus).toFixed(7)+" (sztuk) ");
+</script>
+
+</div>
+</body>
+</html>
+
+<!- Mateusz Kuśmierski 26.10.2023 2P ->

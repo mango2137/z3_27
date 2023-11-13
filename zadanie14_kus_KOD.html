@@ -1,0 +1,40 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+<!DOCTYPE html> 
+ <head> 
+ <title> proste obliczenia</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<div>
+ <script language="JavaScript">
+var liczba1=prompt("liczba1=","");
+
+ var m_kus=parseFloat(liczba1);
+ m1_kus = m_kus + 1;
+ m2_kus = m1_kus * (m_kus + 1);
+ m3_kus = m_kus + 2;
+ m4_kus = m1_kus*m3_kus;
+ m5_kus = m_kus*m1_kus;
+ document.write("m=" + m_kus + "<br>");
+ document.write("m = 1/" + m3_kus + " + 1/" + m4_kus + " + 1/" + m5_kus);
+ </script>
+</div>
+</body>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

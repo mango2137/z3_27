@@ -1,0 +1,45 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+    <!DOCTYPE html> 
+    <head> 
+    <title> proste obliczenia</title> 
+    <meta charset="utf-8"> 
+    </head> 
+   <body>
+   <div>
+    <script language="JavaScript">
+   var liczba1=prompt("Podaj pierwszą liczbę    A=","");
+   var liczba2=prompt("Podaj drugą liczbę    B=","");
+   
+    var A_kus=parseFloat(liczba1);
+    var B_kus=parseFloat(liczba2);
+    a = Math.pow(A_kus,3);
+    b = 3*Math.pow(A_kus,2)*(B_kus);
+    c =  3*(A_kus)*Math.pow(B_kus,2);
+    d = Math.pow(B_kus,3);
+    e = a + b + c + d;
+    document.write("podane liczby<br>A=" + A_kus + "<br>B=" + B_kus + "<br>");
+    document.write("("+ A_kus +" + " + B_kus +")^3 = " + A_kus + "^3 + 3*(("+ A_kus +")^2) * (" + B_kus +") + 3*(" + A_kus + ") * ((" + B_kus + ")^2) + "+B_kus+"^3 = ");
+    document.write(a + " + " + b + " + " + c + " + " + d + " = " + e);
+    //                   (A      +     B)       ^3=      A    ^3 + 3*((    A      )^2)*(     B      ) + 3*(     A       )*((      B)      ^2) + B^3 = 1 + 6 + 12 + 8 = 27
+                                                   //a^3  +  3a^2b  +  3ab^2  +  b^3
+    </script>
+   </div>
+   </body>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

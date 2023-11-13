@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function pole_kus()
+{
+var a_dana_kus= parseFloat(document.getElementById('dlugosc').value);
+var b_dana_kus= parseFloat(document.getElementById('dlugosc').value);
+var wynik1_kus= a_dana_kus*2 + b_dana_kus*2;
+document.getElementById("nazwa").innerHTML ="Pole prostokata= "+wynik1_kus.toFixed(2)+" cm^2";
+}
+function obwod_kus()
+{
+var a_dana_kus= parseFloat(document.getElementById('dlugosc').value);
+var b_dana_kus= parseFloat(document.getElementById('dlugosc').value);
+var wynik2_kus= a_dana_kus*b_dana_kus;
+document.getElementById("nazwa").innerHTML ="Obwód prostokata= "+wynik2_kus.toFixed(2)+" cm";
+}
+</script>
+<h1>Wszystko o 	PROSTOKĄCIE</h1><br><br>
+Podaj długość boku a: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+Podaj długość boku b: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+<input type="button" name="pole" value="Oblicz pole" Onclick="pole_kus()"><br><br>
+<input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_kus()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>

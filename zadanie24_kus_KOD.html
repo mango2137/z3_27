@@ -1,0 +1,65 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+    <!DOCTYPE html>
+    <html lang="pl-PL">
+    <head>
+    <title>Kuśmierski</title>
+    <script language="JavaScript">
+    // Mateusz Kuśmierski 26.10.2023 2P 
+    function Drabina(d,x)
+    {
+     var d_kus=parseFloat(d)
+     var x_kus=parseFloat(x)
+     var Drabina=Math.sqrt(d_kus*d_kus+x_kus*x_kus);
+    document.getElementsByName('drabina_kus')[0].value= Drabina.toFixed(2);
+    }
+    function Alfa(d,x)
+    {
+     var d_kus=parseFloat(d)
+     var x_kus=parseFloat(x)
+     var Alfa=(Math.atan(d_kus/x_kus)*180/Math.PI);
+    document.getElementsByName('alfa_kus')[0].value= Alfa.toFixed(2);
+    }
+    </script>
+    <meta charset="utf-8">
+    </head>
+    <body>
+    <p>Pobliczanie odległości od drabiny i kąta</p>
+    <form name="formularz" onsubmit="Drabina(this.d.value, this.x.value); Alfa(this.d.value, this.x.value); return false">
+    Podaj d=
+    <input size="6" name="d">
+    Podaj x=
+    <input size="6" name="x">
+    <br> <br>
+    <input type="submit" Value="oblicz" >
+    <br> <br>
+    Drabina=
+    <input size="6" name="drabina_kus">
+    Alfa=
+    <input size="6" name="alfa_kus">
+    <table>
+    <tr id="dlugosc_kus"></tr>
+    <tr id="kat_kus"></tr>
+    </table>
+    </form>
+    </body>
+    </html>
+    
+    <!- Mateusz Kuśmierski 26.10.2023 2P ->
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

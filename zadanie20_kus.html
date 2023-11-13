@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function AB_kus()
+{
+var a_x_kus = parseFloat(document.getElementById('ax').value);
+var a_y_kus = parseFloat(document.getElementById('ay').value);
+var b_x_kus = parseFloat(document.getElementById('bx').value);
+var b_y_kus = parseFloat(document.getElementById('by').value);
+var potega1 = Math.pow((a_x_kus - b_x_kus),2);
+var potega2 = Math.pow((a_y_kus - b_y_kus),2);
+var h = Math.sqrt(potega1+potega2);
+document.getElementById("Bok").innerHTML ="Dlugosc boku AB= "+h.toFixed(2)+" cm.";
+}
+
+function BC_kus()
+{
+var b_x_kus = parseFloat(document.getElementById('bx').value);
+var b_y_kus = parseFloat(document.getElementById('by').value);
+var c_x_kus = parseFloat(document.getElementById('cx').value);
+var c_y_kus = parseFloat(document.getElementById('cy').value);
+var potega1 = Math.pow((b_x_kus - c_x_kus),2);
+var potega2 = Math.pow((b_y_kus - c_y_kus),2);
+var h = Math.sqrt(potega1+potega2);
+document.getElementById("Bok").innerHTML ="Dlugosc boku BC= "+h.toFixed(2)+" cm.";
+}
+function AC_kus()
+{
+var a_x_zag = parseFloat(document.getElementById('ax').value);
+var a_y_zag = parseFloat(document.getElementById('ay').value);
+var c_x_zag = parseFloat(document.getElementById('cx').value);
+var c_y_zag = parseFloat(document.getElementById('cy').value);
+var potega1 = Math.pow((a_x_zag - c_x_zag),2);
+var potega2 = Math.pow((a_y_zag - c_y_zag),2);
+var h = Math.sqrt(potega1+potega2);
+document.getElementById("Bok").innerHTML ="Dlugosc boku AC= "+h.toFixed(2)+" cm.";
+}
+</script>
+<center>
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj a x: <input type="text" id="ax" value="podaj ax"> cm<br>
+Podaj a y: <input type="text" id="ay" value="podaj ay"> cm<br>
+
+Podaj b x: <input type="text" id="bx" value="podaj bx"> cm<br>
+Podaj b y: <input type="text" id="by" value="podaj by"> cm<br>
+
+Podaj c x: <input type="text" id="cx" value="podaj cx"> cm<br>
+Podaj c y: <input type="text" id="cy" value="podaj cy"> cm<br><br>
+
+<input type="button" name="pole" value="Bok AB" Onclick="AB_kus()">
+<input type="button" name="pole" value="Bok BC" Onclick="BC_kus()">
+<input type="button" name="pole" value="Bok AC" Onclick="AC_kus()"><br><br>
+
+<div style="color:red;font-size:50px;"id="Bok"></div>
+</center>
+
+</body>
+</html>
