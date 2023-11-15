@@ -9,46 +9,65 @@
 </head>
 <body>
  <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
   <html>
     <head>
-    <title>
-    Kuśmierski
-    </title>
-    <script language="JavaScript">
-    function Alfa(x_kus,s_kus)
-    {
-    x_kus=parseFloat(x_kus)
-    s_kus=parseFloat(s_kus)
-    Alfa_kus = x_kus/s_kus;
-    document.getElementsByName('alfa_kus')[0].value=Alfa_kus.toFixed(2);  
-    }
-    function O(x_kus,s_kus)
-    {
-    x_kus=parseFloat(x_kus)
-    s_kus=parseFloat(s_kus)
-    h = Math.pow(s_kus,2)-Math.pow(x_kus,2);
-    wysokosc_wynik_kus = Math.sqrt(h);
-    document.getElementsByName('wys_kus')[0].value=wysokosc_wynik_kus.toFixed(2);;
-    }
-    </script>
+     <script type="text/javascript">
+     function okno_zamknij_siejka()
+     {
+     window.close()
+     }
+     </script>
     </head>
     <body>
-    <center>
-    <br> <br>
-    <form name="formularz" action="..." onsubmit="Alfa(this.odleglosc.value,this.droga.value); O(this.odleglosc.value,this.droga.value);return false">
-    Podaj odleglosc =
-    <input size="6" name="odleglosc">
-    Podaj droge =
-    <input size="6" name="droga">
-    <br> <br>
-    <input TYPE="submit" Value="oblicz" >
-    <br> <br>
-    Wysokosc =
-    <input size="6" name="wys_kus">
-    Alfa =
-    <input size="6" name="alfa_kus">
+     <form>
+      <html>
+        <head>
+        <title>
+        Kuśmierski
+        </title>
+        <script language="JavaScript">
+        function Alfa(x_kus,s_kus)
+        {
+        x_kus=parseFloat(x_kus)
+        s_kus=parseFloat(s_kus)
+        Alfa_kus = x_kus/s_kus;
+        document.getElementsByName('alfa_kus')[0].value=Alfa_kus.toFixed(2);  
+        }
+        function Odl_kus(x_kus,s_kus)
+        {
+        x_kus=parseFloat(x_kus)
+        s_kus=parseFloat(s_kus)
+        h_kus = Math.pow(s_kus,2)-Math.pow(x_kus,2);
+        wysokosc_wynik_kus = Math.sqrt(h_kus);
+        document.getElementsByName('wys_kus')[0].value=wysokosc_wynik_kus.toFixed(2);;
+        }
+        </script>
+        </head>
+        <body>
+        <center>
+        <br> <br>
+        <form name="formularz" action="..." onsubmit="Alfa(this.odleglosc.value,this.droga.value); Odl_kus(this.odleglosc.value,this.droga.value);return false">
+        Podaj odleglosc =
+        <input size="6" name="odleglosc">
+        Podaj droge =
+        <input size="6" name="droga">
+        <br> <br>
+        <input TYPE="submit" Value="oblicz" >
+        <br> <br>
+        Wysokosc =
+        <input size="6" name="wys_kus">
+        Alfa =
+        <input size="6" name="alfa_kus">
+        </form>
+        </center>
+        </body>
+        </html>
+     </textarea>
     </form>
-    </center>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+    <script type="text/javascript">
+    </script>
     </body>
     </html>
  </textarea>
